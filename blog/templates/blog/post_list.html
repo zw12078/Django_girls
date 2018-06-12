@@ -2,20 +2,18 @@
     <head>
         <title>Ola's Blog</title>
     </head>
-    <body>
+        {% for post in posts %}
         <div>
-            <h1><a href = "">Django Girls Blog</a></h1>
-        </div>
-        <div>
-            <p>published: 11.06.2018, 17:50</p>
-            <h2><a href= ""> My first post</a></h2>
-            <p> Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        </div>
-
-        <div>
-            <p> published: 11.06.2018, 17:55</p>
-            <h2><a href=""> My seconde post</a></h2>
-            <P>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut f.</P>
-        </div>
-    </body>
+            <h1><a href= ""> {{post.title}}</a></h1>
+            <p> {{post.text }}</p> 
+            <p>{{post.published_date}}</p>
+        </div> 
+        {% endfor %}
+        <!-- <div> -->
+            <!-- {{ posts }} -->
+            <!-- <p> published: 11.06.2018, 17:55</p> -->
+            <!-- <h2><a href=""> My seconde post</a></h2> -->
+            <!-- <P>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut f.</P> -->
+         <!-- </div> --> 
 </html>
+
